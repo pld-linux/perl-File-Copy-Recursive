@@ -5,20 +5,18 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	Copy-Recursive
-Summary:	File::Copy::Recursive - Perl extension for recursively copying files and directories
-#Summary(pl):	
+Summary:	File::Copy::Recursive - recursively copying files and directories
+Summary(pl):	File::Copy::Recursive - rekurencyjne kopiowanie plików i katalogów
 Name:		perl-File-Copy-Recursive
 Version:	0.25
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/D/DM/DMUEY/File-Copy-Recursive-0.25.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/D/DM/DMUEY/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5562f8d27059c648cf0cf18437229095
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,8 +25,10 @@ This module copies and moves directories recursively (or single files,
 well... singley) to an optional depth and attempts to preserve each
 file or directory's mode.
 
-# %description -l pl
-# TODO
+%description -l pl
+Te modu³ kopiuje i przenosi katalogi rekurencyjnie (lub pojedyncze
+pliki... pojedynczo) do opcjonalnej g³êboko¶ci i próbuje zachowaæ
+uprawnienia ka¿dego pliku i katalogu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -52,5 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorlib}/File/Copy
 %{perl_vendorlib}/File/Copy/*.pm
 %{_mandir}/man3/*
