@@ -6,7 +6,7 @@
 %define	pdir	File
 %define	pnam	Copy-Recursive
 Summary:	File::Copy::Recursive - recursively copying files and directories
-Summary(pl.UTF-8):   File::Copy::Recursive - rekurencyjne kopiowanie plików i katalogów
+Summary(pl.UTF-8):	File::Copy::Recursive - rekurencyjne kopiowanie plików i katalogów
 Name:		perl-File-Copy-Recursive
 Version:	0.25
 Release:	1
