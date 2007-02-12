@@ -6,7 +6,7 @@
 %define	pdir	File
 %define	pnam	Copy-Recursive
 Summary:	File::Copy::Recursive - recursively copying files and directories
-Summary(pl):	File::Copy::Recursive - rekurencyjne kopiowanie plików i katalogów
+Summary(pl.UTF-8):   File::Copy::Recursive - rekurencyjne kopiowanie plikÃ³w i katalogÃ³w
 Name:		perl-File-Copy-Recursive
 Version:	0.25
 Release:	1
@@ -25,10 +25,10 @@ This module copies and moves directories recursively (or single files,
 well... singley) to an optional depth and attempts to preserve each
 file or directory's mode.
 
-%description -l pl
-Te modu³ kopiuje i przenosi katalogi rekurencyjnie (lub pojedyncze
-pliki... pojedynczo) do opcjonalnej g³êboko¶ci i próbuje zachowaæ
-uprawnienia ka¿dego pliku i katalogu.
+%description -l pl.UTF-8
+Te moduÅ‚ kopiuje i przenosi katalogi rekurencyjnie (lub pojedyncze
+pliki... pojedynczo) do opcjonalnej gÅ‚Ä™bokoÅ›ci i prÃ³buje zachowaÄ‡
+uprawnienia kaÅ¼dego pliku i katalogu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
