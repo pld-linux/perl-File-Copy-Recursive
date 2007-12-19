@@ -8,13 +8,13 @@
 Summary:	File::Copy::Recursive - recursively copying files and directories
 Summary(pl.UTF-8):	File::Copy::Recursive - rekurencyjne kopiowanie plików i katalogów
 Name:		perl-File-Copy-Recursive
-Version:	0.25
+Version:	0.35
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/D/DM/DMUEY/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5562f8d27059c648cf0cf18437229095
+# Source0-md5:	795368083eb7b50f4b5ee33b2d2b9a5e
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
