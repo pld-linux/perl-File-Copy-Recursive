@@ -54,5 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %dir %{perl_vendorlib}/File/Copy
-%{perl_vendorlib}/File/Copy/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/File/Copy/Recursive.pm
+%{_mandir}/man3/File::Copy::Recursive.3pm*
