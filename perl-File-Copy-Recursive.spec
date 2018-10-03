@@ -8,16 +8,25 @@
 Summary:	File::Copy::Recursive - recursively copying files and directories
 Summary(pl.UTF-8):	File::Copy::Recursive - rekurencyjne kopiowanie plików i katalogów
 Name:		perl-File-Copy-Recursive
-Version:	0.38
+Version:	0.44
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e76dc75ab456510d67c6c3a95183f72f
+# Source0-md5:	6a89eb075d15df85da1778755c72ba6b
 URL:		http://search.cpan.org/dist/File-Copy-Recursive/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-File-Temp
+BuildRequires:	perl-Path-Tiny
+BuildRequires:	perl-Test-Deep
+BuildRequires:	perl-Test-Fatal
+BuildRequires:	perl-Test-File
+BuildRequires:	perl-Test-Warnings
+BuildRequires:	perl-Test-Simple >= 0.88
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes README README.md
 %dir %{perl_vendorlib}/File/Copy
 %{perl_vendorlib}/File/Copy/Recursive.pm
 %{_mandir}/man3/File::Copy::Recursive.3pm*
